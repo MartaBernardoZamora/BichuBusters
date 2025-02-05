@@ -1,15 +1,24 @@
 package org.bichascode.bichubusters.models;
 
 import static org.hamcrest.MatcherAssert.assertThat;
-import static org.hamcrest.Matchers.instanceOf;
+import static org.hamcrest.Matchers.is;
 
 import java.time.LocalDate;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-import static org.hamcrest.CoreMatchers.is;
 
 public class BichuModelTest {
+
+    @Test
+    @DisplayName ("Testeo del método BichuClass")
+    void testBichuClass() {
+        int levelExpect = 4;
+        BichuModel bichuModel1 = new BichuModel("fantasmico", levelExpect, "medio", "vuela",LocalDate.now());
+        int result = bichuModel1.getBichuClass();
+        assertThat(result, is(levelExpect));
+
+    }
 
     @Test
     @DisplayName ("Testeo del método GetName")
@@ -21,13 +30,8 @@ public class BichuModelTest {
         assertThat(result, is(nameExpect));
     }
 
-    @Test
-    @DisplayName ("Testeo del método BichuClass")
 
-    void testBichuClass() {
-        Integer  levelExpect = 4;
-        BichuModel bichuModel1 = new BichuModel("fantasmico", levelExpect, "medio", "vuela", LocalDate.now());
-        Integer result = bichuModel1.getBichuClass();
-        assertThat(result, is(levelExpect));
-}
+
+
+
 }

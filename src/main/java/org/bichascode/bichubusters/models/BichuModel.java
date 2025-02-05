@@ -14,4 +14,9 @@ public class BichuModel {
         return name;
     }
 
+    public Integer getBichuClass() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'getBichuClass'");
+    }
+
 }
