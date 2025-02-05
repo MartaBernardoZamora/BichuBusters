@@ -14,7 +14,7 @@ public class BichuModelTest {
 
     void testGetName() {
         String nameExpect = "fantasmico";
-        BichuModel bichuModel1 = new BichuModel();
+        BichuModel bichuModel1 = new BichuModel(nameExpect);
         String result = bichuModel1.getName();
         assertThat(result, is(nameExpect));
     }

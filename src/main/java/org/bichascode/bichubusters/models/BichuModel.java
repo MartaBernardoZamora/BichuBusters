@@ -2,9 +2,14 @@ package org.bichascode.bichubusters.models;
 
 public class BichuModel {
 
+    private String name;
+
+    public BichuModel(String name) {
+        this.name = name;
+    }
+
     public String getName() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'getName'");
+        return name;
     }
 
 }
