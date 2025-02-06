@@ -6,26 +6,25 @@ public class BichuModel {
 
     private String name;
     private int level;
-    @SuppressWarnings("unused")
     private String danger;
-    @SuppressWarnings("unused")
     private String ability;
-    @SuppressWarnings("unused")
-    private LocalDate localDate;
+    private LocalDate currentDate;
 
 
     public BichuModel(
         String name,
         int level,
         String danger,
-        String ability,
-        LocalDate localDate) {
+        String ability) {
             this.name = name;
             this.level = level;
             this.danger = danger;
             this.ability = ability;
-            this.localDate = localDate;
+            this.currentDate = currentDate();
+        }
 
+    private LocalDate currentDate() {
+        return LocalDate.now();
     }
 
     public String getName() {
