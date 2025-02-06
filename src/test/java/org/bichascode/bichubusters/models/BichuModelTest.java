@@ -30,6 +30,15 @@ public class BichuModelTest {
         assertThat(result, is(nameExpect));
     }
 
+    @Test
+    @DisplayName ("Testeo del método GetDanger")
+
+    void testGetDanger() {
+        String dangerExpect = "medio";
+        BichuModel bichuModel1 = new BichuModel("fantasmico", 4, dangerExpect, "vuela", LocalDate.now());
+        String result = bichuModel1.getDanger();
+        assertThat(result, is(dangerExpect));
+    }
 
 
 

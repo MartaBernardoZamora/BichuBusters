@@ -36,4 +36,9 @@ public class BichuModel {
         return level;
     }
 
+    public String getDanger() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'getDanger'");
+    }
+
 }
