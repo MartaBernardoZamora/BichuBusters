@@ -41,8 +41,7 @@ public class BichuModel {
     }
 
     public String getAbility() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'getAbility'");
+        return ability;
     }
 
 }
