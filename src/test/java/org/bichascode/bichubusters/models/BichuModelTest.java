@@ -40,7 +40,15 @@ public class BichuModelTest {
         assertThat(result, is(dangerExpect));
     }
 
+    @Test
+    @DisplayName ("Testeo del método GetName")
 
+    void testGetAbility() {
+        String getAbility = "vuela";
+        BichuModel bichuModel1 = new BichuModel("fantasmico", 4, "medio", getAbility, LocalDate.now());
+        String result = bichuModel1.getAbility();
+        assertThat(result, is(getAbility));
+    }
 
 
 }

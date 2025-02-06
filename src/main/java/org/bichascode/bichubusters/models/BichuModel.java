@@ -40,4 +40,9 @@ public class BichuModel {
         return danger;
     }
 
+    public String getAbility() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'getAbility'");
+    }
+
 }
