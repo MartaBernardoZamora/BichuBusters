@@ -43,4 +43,5 @@ public class BichuModel {
         return ability;
     }
 
+
 }

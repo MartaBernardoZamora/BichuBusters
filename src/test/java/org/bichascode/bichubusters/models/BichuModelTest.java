@@ -45,9 +45,18 @@ public class BichuModelTest {
 
     void testGetAbility() {
         String getAbility = "vuela";
-        BichuModel bichuModel1 = new BichuModel("fantasmico", 4, "medio", getAbility );
+        BichuModel bichuModel1 = new BichuModel("fantasmico", 4, "medio", getAbility);
         String result = bichuModel1.getAbility();
         assertThat(result, is(getAbility));
+    }
+
+    @Test
+    @DisplayName ("Testeo del método GetDate")
+    void testGetDate() {
+        LocalDate currentDate = LocalDate.now ();
+        BichuModel bichuModel1 = new BichuModel("fantasmico", 4, "medio", "vuela");
+        LocalDate result = bichuModel1.getDate();
+        assertThat(result, is (currentDate));
     }
 
 
