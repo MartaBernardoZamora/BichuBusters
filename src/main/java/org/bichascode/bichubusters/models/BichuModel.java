@@ -5,18 +5,35 @@ import java.time.LocalDate;
 public class BichuModel {
 
     private String name;
+    private int level;
+    @SuppressWarnings("unused")
+    private String danger;
+    @SuppressWarnings("unused")
+    private String ability;
+    @SuppressWarnings("unused")
+    private LocalDate localDate;
 
-    public BichuModel(String name, Integer levelExpect, String string, String string2, LocalDate localDate) {
-        this.name = name;
+
+    public BichuModel(
+        String name,
+        int level,
+        String danger,
+        String ability,
+        LocalDate localDate) {
+            this.name = name;
+            this.level = level;
+            this.danger = danger;
+            this.ability = ability;
+            this.localDate = localDate;
+
     }
 
     public String getName() {
         return name;
     }
 
-    public Integer getBichuClass() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'getBichuClass'");
+    public int getBichuClass() {
+        return level;
     }
 
 }
