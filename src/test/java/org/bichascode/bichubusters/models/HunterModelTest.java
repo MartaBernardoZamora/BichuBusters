@@ -18,4 +18,16 @@ public class HunterModelTest {
         assertThat(result, is(bichus));
     }
 
+    @Test
+    @DisplayName ("Testear el método addBichu")
+    void testAddBichu() {
+        ArrayList<BichuModel> bichus = new ArrayList<>();
+        HunterModel hunterModel1 = new HunterModel(bichus);
+        BichuModel bichuModel1 = new BichuModel("fantasmico", 4, "medio", "vuela");
+        hunterModel1.addBichu(bichuModel1);
+        ArrayList<BichuModel> result = hunterModel1.getBichuList();
+        assertThat(result.size(), is(1));
+    }
+
+
 }
