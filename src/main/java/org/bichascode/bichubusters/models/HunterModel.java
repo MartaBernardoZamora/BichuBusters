@@ -15,8 +15,7 @@ public class HunterModel {
     }
 
     public void addBichu(BichuModel bichuModel1) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'addBichu'");
+        bichus.add(bichuModel1);
     }
 
 }
