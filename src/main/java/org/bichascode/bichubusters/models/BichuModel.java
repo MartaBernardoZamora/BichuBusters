@@ -37,8 +37,7 @@ public class BichuModel {
     }
 
     public String getDanger() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'getDanger'");
+        return danger;
     }
 
 }
