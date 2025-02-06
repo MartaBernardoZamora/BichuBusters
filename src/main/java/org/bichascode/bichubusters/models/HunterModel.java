@@ -4,13 +4,14 @@ import java.util.ArrayList;
 
 public class HunterModel {
 
+    private ArrayList<BichuModel> bichus;
+
     public HunterModel(ArrayList<BichuModel> bichus) {
-        //TODO Auto-generated constructor stub
+        this.bichus = bichus;
     }
 
     public ArrayList<BichuModel> getBichuList() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'getBichuList'");
+        return bichus;
     }
 
 }
