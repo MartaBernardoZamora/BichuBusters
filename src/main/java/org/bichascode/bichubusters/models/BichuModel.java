@@ -43,4 +43,9 @@ public class BichuModel {
         return ability;
     }
 
+    public LocalDate getDate() {
+        return currentDate;
+    }
+
+
 }
