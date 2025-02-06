@@ -18,4 +18,9 @@ public class HunterModel {
         bichus.add(bichuModel1);
     }
 
+    public void deleteBichu(int bichuNumber) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'deleteBichu'");
+    }
+
 }

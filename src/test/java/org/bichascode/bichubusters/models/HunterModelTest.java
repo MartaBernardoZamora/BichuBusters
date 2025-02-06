@@ -30,4 +30,17 @@ public class HunterModelTest {
     }
 
 
+    @Test
+    @DisplayName ("Testear el método deleteBichu")
+    void testDeleteBichu() {
+        ArrayList<BichuModel> bichus = new ArrayList<>();
+        HunterModel hunterModel1 = new HunterModel(bichus);
+        BichuModel bichuModel1 = new BichuModel("fantasmico", 4, "medio", "vuela");
+        hunterModel1.addBichu(bichuModel1);
+        int bichuNumber = 1; /*Numero proporcionado por el usuario*/
+        hunterModel1.deleteBichu(bichuNumber);
+        ArrayList<BichuModel> result = hunterModel1.getBichuList();
+        assertThat(result.size(), is(0));
+    }
+
 }
