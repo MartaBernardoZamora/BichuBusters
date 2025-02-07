@@ -7,8 +7,18 @@ import org.bichascode.bichubusters.models.HunterModel;
 
 public class HunterController {
 
+    public void catchBichu(String string, int i, String string2, String string3) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'catchBichu'");
+    }
 
-    private HunterModel hunterModel;
+    public HunterModel getHunter() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'getHunter'");
+    }
+
+
+    /*private HunterModel hunterModel;
     
     
     public HunterController() {
@@ -24,6 +34,6 @@ public class HunterController {
     public void catchBichu(String name, int level, String type, String ability) {
         BichuModel bichuModel = new BichuModel(name, level, type, ability);
         hunterModel.getBichuList().add(bichuModel);
-    }
+    }*/
 
 }

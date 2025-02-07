@@ -16,24 +16,23 @@ import static org.hamcrest.Matchers.hasItem;
 public class HunterControllerTest {
 
     @Test
-    @DisplayName("Test método createHunter con lista bichuList vacía")
-    void testCreateHunter() {
-        HunterController hunterController = new HunterController();
-        HunterModel hunterModel = hunterController.createHunter();
-        assertThat(hunterModel, is(instanceOf(HunterModel.class)));
-        assertThat(hunterModel.getBichuList().size(), is(0));
-    }
-    @Test
     @DisplayName("Test método catchBichu y añadir a la lista")
     void testCatchBichu() {
+
         HunterController hunterController = new HunterController();
-        HunterModel hunterModel = hunterController.createHunter();
+        hunterController.catchBichu("fantasmico", 1, "Medio", "vuela");
+
+        ArrayList<BichuModel> result = hunterController.getHunter().getBichuList();
+
+        assertThat(result.size(), is(1));
+
+        /*HunterController hunterController = new HunterController();
 
         hunterController.catchBichu("fantasmico", 1, "Medio", "vuela");
         ArrayList<BichuModel> result = hunterModel.getBichuList();
 
         assertThat(result.size(), is(1));
-        assertThat(result.get(0).getName(), is("fantasmico"));
+        assertThat(result.get(0).getName(), is("fantasmico"));*/
 
     }
 
