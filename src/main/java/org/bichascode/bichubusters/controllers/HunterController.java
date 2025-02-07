@@ -1,23 +1,18 @@
 package org.bichascode.bichubusters.controllers;
 
-import java.util.ArrayList;
-
 import org.bichascode.bichubusters.models.BichuModel;
 import org.bichascode.bichubusters.models.HunterModel;
 
 public class HunterController {
 
-
     private HunterModel hunterModel;
     
-    
+
     public HunterController() {
-        this.hunterModel = createHunter();
+        this.hunterModel = new HunterModel();
     }
 
-    public HunterModel createHunter() {
-        ArrayList<BichuModel> bichus = new ArrayList<>();
-        hunterModel=new HunterModel(bichus);
+    public HunterModel getHunter() {
         return hunterModel;
     }
     

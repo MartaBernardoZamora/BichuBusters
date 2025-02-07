@@ -6,8 +6,8 @@ public class HunterModel {
 
     private ArrayList<BichuModel> bichus;
 
-    public HunterModel(ArrayList<BichuModel> bichus) {
-        this.bichus = bichus;
+    public HunterModel() {
+        this.bichus = new ArrayList<>();
     }
 
     public ArrayList<BichuModel> getBichuList() {
