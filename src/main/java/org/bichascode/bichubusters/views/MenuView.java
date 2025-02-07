@@ -1,8 +1,17 @@
 package org.bichascode.bichubusters.views;
 
+import java.util.Scanner;
+
+import org.bichascode.bichubusters.controllers.HunterController;
 
 public class MenuView {
-    public void showMenuView() {
+    private Scanner scanner;
+
+    public MenuView(Scanner scanner) {
+        this.scanner = scanner;
+	}
+
+	public void showMenuView() {
         System.out.println("""
            Opciones:
             1. Capturar un nuevo fantasma
@@ -15,6 +24,8 @@ public class MenuView {
             Por favor, selecciona una opción (1-6):
             """
         );
+        int userOption = scanner.nextInt();
+        HunterController.handleMenuOption(userOption);
     }
 
 }
