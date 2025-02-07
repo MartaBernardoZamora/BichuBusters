@@ -19,7 +19,7 @@ public class HunterModel {
     }
 
     public void deleteBichu(int bichuNumber) {
-        bichus.remove(bichuNumber -1);
+        bichus.remove(bichuNumber-1);
     }
 
 }
