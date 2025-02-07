@@ -19,8 +19,7 @@ public class HunterModel {
     }
 
     public void deleteBichu(int bichuNumber) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'deleteBichu'");
+        bichus.remove(bichuNumber -1);
     }
 
 }
