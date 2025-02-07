@@ -12,4 +12,9 @@ public class HunterController {
         return new HunterModel(bichus);
     }
 
+    public void catchBichu() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'catchBichu'");
+    }
+
 }
