@@ -6,9 +6,11 @@ import org.bichascode.bichubusters.controllers.HunterController;
 
 public class MenuView {
     private Scanner scanner;
+    private HunterController hunterController;
 
-    public MenuView(Scanner scanner) {
+    public MenuView(Scanner scanner, HunterController hunterController) {
         this.scanner = scanner;
+        this.hunterController = hunterController;
 	}
 
 	public void showMenuView() {
@@ -25,7 +27,7 @@ public class MenuView {
             """
         );
         int userOption = scanner.nextInt();
-        HunterController.handleMenuOption(userOption);
+        hunterController.handleMenuOption(userOption);
     }
 
 }
