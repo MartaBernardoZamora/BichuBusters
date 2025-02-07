@@ -32,8 +32,7 @@ public class HunterController {
     }
 
     public static void handleMenuOption(int userOption) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'handleMenuOption'");
+       System.out.println("Opción seleccionada: " + userOption);
     }
 
 }
