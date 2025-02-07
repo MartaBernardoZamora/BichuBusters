@@ -15,10 +15,10 @@ public class HunterController {
         this.hunterModel = createHunter();
     }
 
-    public HunterModel createHunter() {
+    public void createHunter() {
         ArrayList<BichuModel> bichus = new ArrayList<>();
         hunterModel=new HunterModel(bichus);
-        return hunterModel;
+        //MenuView
     }
     
     public void catchBichu(String name, int level, String type, String ability) {

@@ -12,29 +12,25 @@ public class HunterModelTest {
     @Test
     @DisplayName ("Testear el método getBichuList")
     void testGetBichuList() {
-       ArrayList<BichuModel> bichus = new ArrayList<>();
-       HunterModel hunterModel1 = new HunterModel(bichus);
+       HunterModel hunterModel1 = new HunterModel();
         ArrayList<BichuModel> result = hunterModel1.getBichuList();
-        assertThat(result, is(bichus));
+        ArrayList<BichuModel> resultExpected = new ArrayList<>();
+        assertThat(result, is(resultExpected));
     }
 
     @Test
     @DisplayName ("Testear el método addBichu")
     void testAddBichu() {
-        ArrayList<BichuModel> bichus = new ArrayList<>();
-        HunterModel hunterModel1 = new HunterModel(bichus);
+        HunterModel hunterModel1 = new HunterModel();
         BichuModel bichuModel1 = new BichuModel("fantasmico", 4, "medio", "vuela");
         hunterModel1.addBichu(bichuModel1);
         ArrayList<BichuModel> result = hunterModel1.getBichuList();
         assertThat(result.size(), is(1));
     }
-
-
     @Test
     @DisplayName ("Testear el método deleteBichu")
     void testDeleteBichu() {
-        ArrayList<BichuModel> bichus = new ArrayList<>();
-        HunterModel hunterModel1 = new HunterModel(bichus);
+        HunterModel hunterModel1 = new HunterModel();
         BichuModel bichuModel1 = new BichuModel("fantasmico", 4, "medio", "vuela");
         hunterModel1.addBichu(bichuModel1);
         int bichuNumber = 1; /*Numero proporcionado por el usuario*/
