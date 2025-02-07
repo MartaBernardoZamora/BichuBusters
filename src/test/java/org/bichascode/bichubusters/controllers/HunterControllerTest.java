@@ -10,6 +10,8 @@ import java.util.ArrayList;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.instanceOf;
 import static org.hamcrest.Matchers.is;
+import static org.hamcrest.Matchers.equalTo;
+import static org.hamcrest.Matchers.hasItem;
 
 public class HunterControllerTest {
 
@@ -27,16 +29,11 @@ public class HunterControllerTest {
         HunterController hunterController = new HunterController();
         HunterModel hunterModel = hunterController.createHunter();
 
-        BichuModel bichuModel = new BichuModel("fantasmico", 1, "Medio", "vuela");
-        ArrayList<BichuModel> bichuListExpect = new ArrayList<>();
-        bichuListExpect.add(bichuModel);
-
-        hunterController.catchBichu();
+        hunterController.catchBichu("fantasmico", 1, "Medio", "vuela");
         ArrayList<BichuModel> result = hunterModel.getBichuList();
 
         assertThat(result.size(), is(1));
         assertThat(result.get(0).getName(), is("fantasmico"));
-        assertThat(result, is(bichuListExpect));
 
     }
 

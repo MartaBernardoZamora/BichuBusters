@@ -7,14 +7,23 @@ import org.bichascode.bichubusters.models.HunterModel;
 
 public class HunterController {
 
-    public HunterModel createHunter() {
-        ArrayList<BichuModel> bichus = new ArrayList<>();
-        return new HunterModel(bichus);
+
+    private HunterModel hunterModel;
+    
+    
+    public HunterController() {
+        this.hunterModel = createHunter();
     }
 
-    public void catchBichu() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'catchBichu'");
+    public HunterModel createHunter() {
+        ArrayList<BichuModel> bichus = new ArrayList<>();
+        hunterModel=new HunterModel(bichus);
+        return hunterModel;
+    }
+    
+    public void catchBichu(String name, int level, String type, String ability) {
+        BichuModel bichuModel = new BichuModel(name, level, type, ability);
+        hunterModel.getBichuList().add(bichuModel);
     }
 
 }
