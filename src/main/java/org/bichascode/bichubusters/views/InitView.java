@@ -13,6 +13,6 @@ public class InitView {
             """
         );
         HunterController hunterController = new HunterController();
-        //hunterController.printMenuView();
+        hunterController.printMenuView();
     }
 }
