@@ -22,7 +22,7 @@ public class HunterModelTest {
     @DisplayName ("Testear el método addBichu")
     void testAddBichu() {
         HunterModel hunterModel1 = new HunterModel();
-        BichuModel bichuModel1 = new BichuModel("fantasmico", 4, "medio", "vuela");
+        BichuModel bichuModel1 = new BichuModel("fantasmico", Level.CLASS4, "medio", "vuela");
         hunterModel1.addBichu(bichuModel1);
         ArrayList<BichuModel> result = hunterModel1.getBichuList();
         assertThat(result.size(), is(1));
@@ -31,7 +31,7 @@ public class HunterModelTest {
     @DisplayName ("Testear el método deleteBichu")
     void testDeleteBichu() {
         HunterModel hunterModel1 = new HunterModel();
-        BichuModel bichuModel1 = new BichuModel("fantasmico", 4, "medio", "vuela");
+        BichuModel bichuModel1 = new BichuModel("fantasmico", Level.CLASS4, "medio", "vuela");
         hunterModel1.addBichu(bichuModel1);
         int bichuNumber = 1; /*Numero proporcionado por el usuario*/
         hunterModel1.deleteBichu(bichuNumber);
