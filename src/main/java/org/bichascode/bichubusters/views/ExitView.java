@@ -18,7 +18,6 @@ public class ExitView {
     public void showExitView() {
         System.out.println("Si abandonas el juego tu progreso se perderá! \n ¿Estás seguro de que quieres abandonar? Y / N");
         String userOption = scanner.next();
-        System.out.println(userOption);
         if(userOption.equals("Y")) {
             System.out.println("Gracias por ayudarnos a cazar todos estos bichus! Te esperamos pronto!");
             System.exit(0);
