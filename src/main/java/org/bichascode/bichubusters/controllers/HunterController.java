@@ -1,9 +1,11 @@
 package org.bichascode.bichubusters.controllers;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 import org.bichascode.bichubusters.models.BichuModel;
 import org.bichascode.bichubusters.models.HunterModel;
+import org.bichascode.bichubusters.views.BichuListView;
 import org.bichascode.bichubusters.views.CatchView;
 import org.bichascode.bichubusters.views.MenuView;
 
@@ -26,6 +28,7 @@ public class HunterController {
         BichuModel bichuModel = new BichuModel(name, level, type, ability);
         hunterModel.getBichuList().add(bichuModel);
         System.out.println("Has capturado a " + name + "! con nivel " + level + " y peligro " + type + " y habilidad " + ability);
+        printMenuView();
     }
 
     public void printMenuView() {
@@ -37,6 +40,15 @@ public class HunterController {
         if(userOption == 1) {
             CatchView catchView = new CatchView(scanner, this);
             catchView.showCatchView();
+        }
+        else if(userOption == 2) {            
+            ArrayList<BichuModel> bichuList = hunterModel.getBichuList();
+            BichuListView bichuListView = new BichuListView(this, bichuList);
+            bichuListView.showBichuListView();
+        }
+        else if(userOption == 6) {
+            System.out.println("Si abandonas el juego tu progreso se perderá!");
+            System.exit(0);
         }
     }
 
