@@ -28,7 +28,7 @@ public class BichuListView {
                     bichu.getBichuClass(),
                     bichu.getDanger(),
                     bichu.getAbility()
-                );            
+                );
             }
             System.out.println("==================================================================\n");
         }
