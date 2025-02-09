@@ -30,7 +30,6 @@ public class BichuListView {
                     bichu.getAbility()
                 );            
             }
-            System.out.println("==================================================================\n");
         }
     }
 
