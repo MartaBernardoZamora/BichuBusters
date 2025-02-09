@@ -1,11 +1,12 @@
 package org.bichascode.bichubusters.models;
 
+
 import java.time.LocalDate;
 
 public class BichuModel {
 
     private String name;
-    private int level;
+    private Level level;
     private String danger;
     private String ability;
     private LocalDate currentDate;
@@ -13,7 +14,7 @@ public class BichuModel {
 
     public BichuModel(
         String name,
-        int level,
+        Level level,
         String danger,
         String ability) {
             this.name = name;
@@ -31,7 +32,7 @@ public class BichuModel {
         return name;
     }
 
-    public int getBichuClass() {
+    public Level getBichuClass() {
         return level;
     }
 
