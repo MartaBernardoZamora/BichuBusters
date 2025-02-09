@@ -25,7 +25,7 @@ public class BichuListView {
                 System.out.printf("%-5s %-20s %-10s %-10s %-20s%n",
                     bichuList.indexOf(bichu)+1,
                     bichu.getName(),
-                    bichu.getBichuClass(),
+                    bichu.getBichuClass().getClassLevel(),
                     bichu.getDanger(),
                     bichu.getAbility()
                 );

@@ -6,7 +6,8 @@ public enum Level {
     CLASS3("Alto"),
     CLASS4("Muy Alto"),
     CLASS5("Extremo"),
-    CLASS6("Legendario");
+    CLASS6("Legendario"),
+    CLASS7("Divino");
 
     private final String classLevel;
 

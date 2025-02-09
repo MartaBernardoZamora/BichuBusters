@@ -27,8 +27,35 @@ public class HunterController {
         return hunterModel;
     }
 
-    public void catchBichu(String name, Level level, String type, String ability) {
-        BichuModel bichuModel = new BichuModel(name, level, type, ability);
+    public void catchBichu(String name, int level, String type, String ability) {
+        Level classLevel;
+        switch (level) {
+            case 1:
+                classLevel = Level.CLASS1;
+                break;
+            case 2:
+                classLevel = Level.CLASS2;
+                break;
+            case 3:
+                classLevel = Level.CLASS3;
+                break;
+            case 4:
+                classLevel = Level.CLASS4;
+                break;
+            case 5:
+                classLevel = Level.CLASS5;
+                break;
+            case 6:
+                classLevel = Level.CLASS6;
+                break;
+            case 7:
+                classLevel = Level.CLASS7;
+                break;
+            default:
+                classLevel = null;
+                break;
+        }
+        BichuModel bichuModel = new BichuModel(name, classLevel, type, ability);
         hunterModel.getBichuList().add(bichuModel);
         System.out.println("Has capturado a " + name + "! con nivel " + level + " y peligro " + type + " y habilidad " + ability);
         printMenuView();
