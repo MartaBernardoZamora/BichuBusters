@@ -45,6 +45,7 @@ public class HunterController {
             ArrayList<BichuModel> bichuList = hunterModel.getBichuList();
             BichuListView bichuListView = new BichuListView(this, bichuList);
             bichuListView.showBichuListView();
+            printMenuView();
         }
         else if(userOption == 6) {
             System.out.println("Si abandonas el juego tu progreso se perderá!");
