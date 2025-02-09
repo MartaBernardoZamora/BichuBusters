@@ -13,9 +13,9 @@ public class BichuModelTest {
     @Test
     @DisplayName ("Testeo del método BichuClass")
     void testBichuClass() {
-        int levelExpect = 4;
+        Level levelExpect = Level.CLASS4;
         BichuModel bichuModel1 = new BichuModel("fantasmico", levelExpect, "medio", "vuela");
-        int result = bichuModel1.getBichuClass();
+        Level result = bichuModel1.getBichuClass();
         assertThat(result, is(levelExpect));
 
     }
@@ -25,7 +25,7 @@ public class BichuModelTest {
 
     void testGetName() {
         String nameExpect = "fantasmico";
-        BichuModel bichuModel1 = new BichuModel(nameExpect, 4, "medio", "vuela");
+        BichuModel bichuModel1 = new BichuModel(nameExpect, Level.CLASS4, "medio", "vuela");
         String result = bichuModel1.getName();
         assertThat(result, is(nameExpect));
     }
@@ -35,7 +35,7 @@ public class BichuModelTest {
 
     void testGetDanger() {
         String dangerExpect = "medio";
-        BichuModel bichuModel1 = new BichuModel("fantasmico", 4, dangerExpect, "vuela");
+        BichuModel bichuModel1 = new BichuModel("fantasmico", Level.CLASS4, dangerExpect, "vuela");
         String result = bichuModel1.getDanger();
         assertThat(result, is(dangerExpect));
     }
@@ -45,7 +45,7 @@ public class BichuModelTest {
 
     void testGetAbility() {
         String getAbility = "vuela";
-        BichuModel bichuModel1 = new BichuModel("fantasmico", 4, "medio", getAbility);
+        BichuModel bichuModel1 = new BichuModel("fantasmico", Level.CLASS4, "medio", getAbility);
         String result = bichuModel1.getAbility();
         assertThat(result, is(getAbility));
     }
@@ -54,7 +54,7 @@ public class BichuModelTest {
     @DisplayName ("Testeo del método GetDate")
     void testGetDate() {
         LocalDate currentDate = LocalDate.now ();
-        BichuModel bichuModel1 = new BichuModel("fantasmico", 4, "medio", "vuela");
+        BichuModel bichuModel1 = new BichuModel("fantasmico", Level.CLASS4, "medio", "vuela");
         LocalDate result = bichuModel1.getDate();
         assertThat(result, is (currentDate));
     }
