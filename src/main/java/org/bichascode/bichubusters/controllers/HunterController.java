@@ -47,7 +47,7 @@ public class HunterController {
             bichuListView.showBichuListView();
         }
         else if(userOption == 6) {
-            System.out.println("Adios!");
+            System.out.println("Si abandonas el juego tu progreso se perderá!");
             System.exit(0);
         }
     }

@@ -17,10 +17,20 @@ public class BichuListView {
         System.out.println("Tu lista de bichus capturados es: ");
         if(bichuList.size()==0) {
             System.out.println("No hay capturas");
-        }
-        for(BichuModel bichu : bichuList) {
-            System.out.println(bichu.getName() + " con nivel " + bichu.getBichuClass() + " y peligro " + bichu.getDanger() + " y habilidad " + bichu.getAbility());
-        }
+        }else{
+            System.out.println("==================================================================");
+            System.out.printf("%-5s %-20s %-10s %-10s %-20s%n", "ID","Nombre", "Nivel", "Peligro", "Habilidad");
+            System.out.println("------------------------------------------------------------------");
+            for(BichuModel bichu : bichuList) {
+                System.out.printf("%-5s %-20s %-10s %-10s %-20s%n",
+                    bichuList.indexOf(bichu)+1,
+                    bichu.getName(),
+                    bichu.getBichuClass(),
+                    bichu.getDanger(),
+                    bichu.getAbility()
+                );            
+            }
+        }       
         hunterController.printMenuView();
     }
 
