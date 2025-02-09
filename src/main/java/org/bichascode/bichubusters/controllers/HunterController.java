@@ -5,6 +5,7 @@ import java.util.Scanner;
 
 import org.bichascode.bichubusters.models.BichuModel;
 import org.bichascode.bichubusters.models.HunterModel;
+import org.bichascode.bichubusters.models.Level;
 import org.bichascode.bichubusters.views.BichuListView;
 import org.bichascode.bichubusters.views.CatchView;
 import org.bichascode.bichubusters.views.ExitView;
@@ -26,7 +27,7 @@ public class HunterController {
         return hunterModel;
     }
 
-    public void catchBichu(String name, int level, String type, String ability) {
+    public void catchBichu(String name, Level level, String type, String ability) {
         BichuModel bichuModel = new BichuModel(name, level, type, ability);
         hunterModel.getBichuList().add(bichuModel);
         System.out.println("Has capturado a " + name + "! con nivel " + level + " y peligro " + type + " y habilidad " + ability);
