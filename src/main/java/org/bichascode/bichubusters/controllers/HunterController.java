@@ -7,6 +7,7 @@ import org.bichascode.bichubusters.models.BichuModel;
 import org.bichascode.bichubusters.models.HunterModel;
 import org.bichascode.bichubusters.views.BichuListView;
 import org.bichascode.bichubusters.views.CatchView;
+import org.bichascode.bichubusters.views.ExitView;
 import org.bichascode.bichubusters.views.MenuView;
 import org.bichascode.bichubusters.views.ReleaseBichuView;
 
@@ -56,8 +57,9 @@ public class HunterController {
             releaseBichuView.showReleaseBichuListView();
         }
         else if(userOption == 6) {
-            System.out.println("Si abandonas el juego tu progreso se perderá!");
-            System.exit(0);
+            ExitView exitView = new ExitView(scanner, this);
+            exitView.showExitView();
+
         }
 
     }
