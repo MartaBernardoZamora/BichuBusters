@@ -73,13 +73,13 @@ public class HunterController {
         }
         else if(userOption == 2) {
             ArrayList<BichuModel> bichuList = hunterModel.getBichuList();
-            BichuListView bichuListView = new BichuListView(this, bichuList);
+            BichuListView bichuListView = new BichuListView(bichuList);
             bichuListView.showBichuListView();
             printMenuView();
         }
         else if(userOption == 3) {
             ArrayList<BichuModel> bichuList = hunterModel.getBichuList();
-            BichuListView bichuListView = new BichuListView(this, bichuList);
+            BichuListView bichuListView = new BichuListView(bichuList);
             bichuListView.showBichuListView();
             ReleaseBichuView releaseBichuView = new ReleaseBichuView(scanner, this);
             releaseBichuView.showReleaseBichuListView();
