@@ -30,8 +30,7 @@ public class BichuListView {
                     bichu.getAbility()
                 );            
             }
-        }       
-        hunterController.printMenuView();
+        }
     }
 
 }
