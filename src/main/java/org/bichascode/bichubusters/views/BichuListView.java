@@ -18,11 +18,11 @@ public class BichuListView {
         if(bichuList.size()==0) {
             System.out.println("No hay capturas");
         }else{
-            System.out.println("==================================================================");
-            System.out.printf("%-5s %-20s %-10s %-10s %-20s%n", "ID","Nombre", "Nivel", "Peligro", "Habilidad");
-            System.out.println("------------------------------------------------------------------");
+            System.out.println("==================================================================================");
+            System.out.printf("%-5s %-25s %-35s %-10s %-20s%n", "ID","Nombre", "Nivel", "Peligro", "Habilidad");
+            System.out.println("----------------------------------------------------------------------------------");
             for(BichuModel bichu : bichuList) {
-                System.out.printf("%-5s %-20s %-10s %-10s %-20s%n",
+                System.out.printf("%-5s %-25s %-35s %-10s %-20s%n",
                     bichuList.indexOf(bichu)+1,
                     bichu.getName(),
                     bichu.getBichuClass().getClassLevel(),
@@ -30,7 +30,7 @@ public class BichuListView {
                     bichu.getAbility()
                 );
             }
-            System.out.println("==================================================================\n");
+            System.out.println("==================================================================================\n");
         }
     }
 
